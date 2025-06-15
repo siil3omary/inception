@@ -1,0 +1,16 @@
+
+version: '3.8'
+
+services:
+  nginx:
+    build: ./requirements/nginx
+    ports:
+      - "80:80"
+    restart: always
+  mariadb:
+    build: ./requirements/mariadb
+    ports:
+      - "3306:3306"
+    restart: always
+volumes:
+  db_data:
